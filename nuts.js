@@ -4,7 +4,7 @@ function slice(arr){
 
 function sum(arr){
     return slice(arr).reduce(function(a, b){
-        return 0 + Number(a.toString()) + Number(b.toString());
+        return a + b;
     }, 0);
 }
 
@@ -16,7 +16,7 @@ function add() {
         return add.apply(null, [value].concat(slice(arguments)));
     };
 
-    fn.toString = function(){
+    fn.valueOf = function(){
         return value;
     }
 
