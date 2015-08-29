@@ -1,3 +1,7 @@
+function slice(arr){
+    return Array.prototype.slice.call(arr, 0)
+}
+
 function add() {
   // TODO
 }
