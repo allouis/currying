@@ -3,7 +3,19 @@ function slice(arr){
 }
 
 function add() {
-  // TODO
+    var value = slice(arguments).reduce(function(a, b){
+        return 0 + Number(a.toString()) + Number(b.toString());
+    }, 0);
+
+    function fn(){
+        return add.apply(null, [value].concat(slice(arguments)));
+    };
+
+    fn.toString = function(){
+        return value;
+    }
+
+    return fn;
 }
 
 function test(a, b) {
