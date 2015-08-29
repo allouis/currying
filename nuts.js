@@ -1,5 +1,5 @@
 function slice(arr){
-    return Array.prototype.slice.call(arr, 0)
+    return Array.prototype.slice.call(arr, 0);
 }
 
 function sum(arr){
@@ -18,7 +18,7 @@ function add() {
 
     fn.valueOf = function(){
         return value;
-    }
+    };
 
     return fn;
 }
