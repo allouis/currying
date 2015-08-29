@@ -2,10 +2,15 @@ function slice(arr){
     return Array.prototype.slice.call(arr, 0)
 }
 
-function add() {
-    var value = slice(arguments).reduce(function(a, b){
+function sum(arr){
+    return slice(arr).reduce(function(a, b){
         return 0 + Number(a.toString()) + Number(b.toString());
     }, 0);
+}
+
+function add() {
+
+    var value = sum(arguments);
 
     function fn(){
         return add.apply(null, [value].concat(slice(arguments)));
